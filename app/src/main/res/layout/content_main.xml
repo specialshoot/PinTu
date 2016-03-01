@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.han.pintu.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.example.han.pintu.view.GamePintuLayout
+        android:id="@+id/id_pintu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/id_pintu"
+        android:layout_margin="3dp">
+
+        <TextView
+            android:id="@+id/id_level"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/textbg"
+            android:gravity="center"
+            android:minWidth="100dp"
+            android:padding="4dp"
+            android:text="关卡 : 1"
+            android:textColor="#EA7821"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_bestScore"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/textbg"
+            android:gravity="center"
+            android:minWidth="100dp"
+            android:padding="4dp"
+            android:text="best : 1"
+            android:textColor="#EA7821"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/textbg"
+            android:gravity="center"
+            android:minWidth="100dp"
+            android:padding="4dp"
+            android:text="120"
+            android:textColor="#EA7821"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/id_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_pintu"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/btn_selector"
+        android:gravity="center"
+        android:minWidth="100dp"
+        android:text="选择图片"
+        android:textColor="#EA7821"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/id_setLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/id_pintu"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/btn_selector"
+        android:gravity="center"
+        android:minWidth="100dp"
+        android:padding="4dp"
+        android:text="选择关卡"
+        android:textColor="#EA7821"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>
